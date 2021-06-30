@@ -1,0 +1,12 @@
+import me.lengrand.gufg.plugin.CustomDependencyPlugin
+
+initscript {
+    dependencies {
+        // If the plugin was published instead of copied we would just have to apply it
+        classpath files("/Users/jlengrand/IdeaProjects/github-up-for-grabs/plugin/build/libs/plugin.jar", "/Users/jlengrand/IdeaProjects/github-up-for-grabs/model/build/libs/model.jar")
+    }
+}
+
+allprojects {
+    apply plugin: CustomDependencyPlugin
+}
